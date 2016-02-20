@@ -3,7 +3,15 @@
       <title>Aitent Ded</title>
   </head>
   <body>
-    <p>I HAVE MADE A PAGE ON THE INTERNETS!</p>
+    <p><h1>I HAVE MADE A PAGE ON THE INTERNETS!</h1></p>
+
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+      </div>
+    {% endfor %}
     <p>It will say whatever I tell it to, muah ha ha ha!</p>
   </body>
 </html>
